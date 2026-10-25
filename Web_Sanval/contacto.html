@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanval S.A.C. | Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-oscuro">
+    <nav class="navbar">
+        <div class="logo">SANVAL <span>S.A.C.</span></div>
+        <div class="nav-links">
+            <a href="inicio.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html" style="color: #cc0000;">Contacto</a>
+        </div>
+    </nav>
+
+    <section class="seccion-info reveal">
+        <h2 class="titulo-seccion text-blanco" style="margin-bottom: 20px;">Contacto Corporativo</h2>
+        <p style="text-align: center; color: #aaa; margin-bottom: 50px;">Estamos listos para atender tus pedidos por mayor y consultas empresariales.</p>
+        
+        <div class="contacto-wrapper">
+            <!-- Información de la empresa -->
+            <div class="info-directa">
+                <h3>Sede Principal</h3>
+                <p>📍 Zona Industrial, Los Olivos - Lima, Perú</p>
+                <p>📞 +51 01 555-1234</p>
+                <p>✉️ ventas@sanval.com</p>
+                <h3 style="margin-top: 30px;">Horario de Atención</h3>
+                <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                <p>Sábados: 9:00 AM - 1:00 PM</p>
+            </div>
+
+            <!-- Formulario corregido -->
+            <div class="form-contacto">
+                <input type="text" placeholder="Nombre Completo o Empresa">
+                <input type="email" placeholder="Correo Electrónico">
+                <input type="text" placeholder="Asunto (Ej. Pedido de 50 gorros)">
+                <textarea rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                <button class="btn-principal" style="width: 100%;">Enviar Mensaje</button>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/51999999999" target="_blank" class="btn-whatsapp"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp"></a>
+    
+    <div class="chatbot-container" id="chatbot">
+        <div class="chat-header"><span>🤖 IA Inventario Sanval</span><button onclick="toggleChat()" class="btn-cerrar">×</button></div>
+        <div class="chat-body" id="chat-body"><div class="mensaje bot">¡Hola! Estoy conectado a la BD. Pregúntame sobre el inventario.</div></div>
+        <div class="chat-input"><input type="text" id="userInput" onkeypress="handleKeyPress(event)"><button onclick="procesarMensaje()">Enviar</button></div>
+    </div>
+    <button class="btn-flotante" onclick="toggleChat()">💬 Consultar IA</button>
+    <script src="chatbot.js"></script>
+</body>
+</html>

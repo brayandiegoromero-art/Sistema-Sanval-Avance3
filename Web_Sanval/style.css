@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #111;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #cc0000;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #cc0000;
+}
+
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+        url('https://images.unsplash.com/photo-1590736969955-71cc94801759?q=80&w=1920&auto=format&fit=crop') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #ddd;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-principal {
+    padding: 15px 40px;
+    background-color: #cc0000;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.btn-principal:hover {
+    background-color: #990000;
+    transform: scale(1.05);
+}
+
+/* Secciones de Información (Inicio y Nosotros) */
+.seccion-info {
+    padding: 80px 8%;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #111;
+}
+
+.contenido-info {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.bg-oscuro {
+    background-color: #111;
+    color: white;
+    padding-bottom: 90px;
+}
+
+.grid-beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-beneficio {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    border-top: 4px solid #cc0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.card-beneficio:hover {
+    transform: translateY(-10px);
+}
+
+.card-beneficio h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.card-beneficio p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* Animaciones Avanzadas del Catálogo */
+.productos {
+    padding: 80px 8%;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.card-producto {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-producto:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.img-container {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.card-producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-producto:hover img {
+    transform: scale(1.1);
+}
+
+.info-producto {
+    padding: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.sku {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #cc0000;
+    color: white;
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(204, 0, 0, 0.3);
+}
+
+.info-producto h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    height: 45px;
+    color: #111;
+}
+
+.precio {
+    color: #cc0000;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-comprar {
+    padding: 12px 25px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-comprar:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+}
+
+
+/* Estilos del WhatsApp Flotante */
+.btn-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-whatsapp img {
+    width: 35px;
+    height: 35px;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.15) rotate(-10deg);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* Chatbot IA Integrado (Derecha) */
+.btn-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(204, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.btn-flotante:hover {
+    transform: scale(1.05);
+}
+
+.chatbot-container {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    width: 350px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    z-index: 1000;
+    border: 1px solid #ddd;
+    animation: fadeIn 0.3s;
+}
+
+.chat-header {
+    background: #111;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.btn-cerrar {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.chat-body {
+    height: 350px;
+    padding: 20px;
+    background: #f8f9fa;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mensaje {
+    padding: 12px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 85%;
+}
+
+.mensaje.bot {
+    background: #e9ecef;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+.mensaje.user {
+    background: #cc0000;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #eee;
+    background: white;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+.chat-input button {
+    background: #cc0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* --- NUEVOS ESTILOS PARA LA SECCIÓN NOSOTROS --- */
+.seccion-nosotros {
+    padding: 80px 8%;
+}
+
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nosotros-grid.inverso {
+    /* En pantallas grandes, cambia el orden visual */
+    direction: ltr; 
+}
+
+.titulo-nosotros {
+    font-size: 40px;
+    margin-bottom: 25px;
+    color: #111;
+}
+
+.nosotros-texto p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.bg-oscuro .nosotros-texto p {
+    color: #ddd;
+}
+
+.nosotros-imagen {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.nosotros-imagen:hover img {
+    transform: scale(1.05);
+}
+
+.contacto-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #1a1d24;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    align-items: center;
+}
+
+.info-directa {
+    color: white;
+}
+
+.info-directa h3 {
+    color: #cc0000;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.info-directa p {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    width: 100%;
+}
+
+.form-contacto input, .form-contacto textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #333;
+    background: #0d0f14;
+    color: white;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-contacto input:focus, .form-contacto textarea:focus { 
+    border-color: #cc0000; 
+}
+
+@media (max-width: 850px) {
+    .nosotros-grid, .contacto-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanval S.A.C. | Nosotros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">SANVAL <span>S.A.C.</span></div>
+        <div class="nav-links">
+            <a href="inicio.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="nosotros.html" style="color: #cc0000;">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Bloque 1: Texto Izquierda, Imagen Derecha -->
+    <section class="seccion-nosotros reveal">
+        <div class="nosotros-grid">
+            <div class="nosotros-texto">
+                <h2 class="titulo-nosotros">Nuestra Historia y Legado</h2>
+                <p><strong>Sanval S.A.C.</strong> nació hace más de una década con una visión disruptiva: transformar la industria nacional de marroquinería y artículos de cuero. Comenzamos como un pequeño taller enfocado en gorros de invierno, y hoy nos enorgullece ser una empresa líder a nivel nacional.</p>
+                <p>Nuestra evolución ha estado marcada por la constante inversión en tecnología. Hemos digitalizado todo nuestro flujo de trabajo, desde el modelado de bases de datos para el control estricto de nuestro inventario, hasta la implementación de Inteligencia Artificial para mejorar la experiencia de nuestros clientes.</p>
+            </div>
+            <div class="nosotros-imagen">
+                <img src="https://images.unsplash.com/photo-1590736704728-f4730bb30770?q=80&w=800&auto=format&fit=crop" alt="Taller de Cuero">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloque 2: Imagen Izquierda, Texto Derecha -->
+    <section class="seccion-nosotros bg-oscuro reveal" style="color: white;">
+        <div class="nosotros-grid inverso">
+            <div class="nosotros-imagen">
+                <img src="https://images.unsplash.com/photo-1542614392-808cebfab166?q=80&w=800&auto=format&fit=crop" alt="Corte de Cuero Artesanal">
+            </div>
+            <div class="nosotros-texto">
+                <h2 class="titulo-nosotros text-blanco">Calidad y Materia Prima</h2>
+                <p>Nuestra alianza estratégica y exclusiva con <em>Curtiembre del Sur S.A.</em> nos permite acceder a los cortes de cuero más refinados del país. Cada lote es inspeccionado minuciosamente por nuestro equipo de ingenieros de calidad antes de ingresar al sistema de almacén.</p>
+                <p>Garantizamos un producto 100% genuino, resistente y con acabados que combinan la perfección de la maquinaria moderna con el alma de la costura artesanal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión y Visión -->
+    <section class="seccion-info reveal">
+        <div class="grid-beneficios" style="max-width: 1000px; margin: 0 auto;">
+            <div class="card-beneficio">
+                <h3 style="color: #cc0000;">Nuestra Misión</h3>
+                <p>Diseñar y manufacturar artículos de cuero excepcionales que combinen funcionalidad, confort y un estilo atemporal. Buscamos superar las expectativas del consumidor moderno mediante procesos de producción eficientes y un estándar de calidad insuperable.</p>
+            </div>
+            <div class="card-beneficio">
+                <h3 style="color: #cc0000;">Nuestra Visión</h3>
+                <p>Posicionarnos para el año 2030 como la marca referente y líder absoluto en la industria del cuero a nivel nacional, expandiendo nuestra infraestructura tecnológica y liderando iniciativas de sostenibilidad en la manufactura.</p>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/51999999999" target="_blank" class="btn-whatsapp"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp"></a>
+    
+    <div class="chatbot-container" id="chatbot">
+        <div class="chat-header"><span>🤖 IA Inventario Sanval</span><button onclick="toggleChat()" class="btn-cerrar">×</button></div>
+        <div class="chat-body" id="chat-body"><div class="mensaje bot">¡Hola! Estoy conectado a la BD. Pregúntame sobre el inventario.</div></div>
+        <div class="chat-input"><input type="text" id="userInput" onkeypress="handleKeyPress(event)"><button onclick="procesarMensaje()">Enviar</button></div>
+    </div>
+    <button class="btn-flotante" onclick="toggleChat()">💬 Consultar IA</button>
+    <script src="chatbot.js"></script>
+</body>
+</html>

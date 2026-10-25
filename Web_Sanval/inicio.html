@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanval S.A.C. | Inicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">SANVAL <span>S.A.C.</span></div>
+        <div class="nav-links">
+            <a href="inicio.html" style="color: #cc0000;">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Tradición y Elegancia en Cuero</h1>
+            <p>Descubre nuestra exclusiva línea de gorros, sombreros y accesorios. Fabricados a mano con cuero 100% genuino y tecnología de punta para garantizar durabilidad y estilo inigualable.</p>
+            <a href="catalogo.html" class="btn-principal">Explorar Colección</a>
+        </div>
+    </header>
+
+    <section class="seccion-info reveal">
+        <h2 class="titulo-seccion">¿Por qué elegir Sanval?</h2>
+        <div class="grid-beneficios">
+            <div class="card-beneficio">
+                <h3>🧥 Cuero 100% Genuino</h3>
+                <p>Trabajamos exclusivamente con materias primas seleccionadas de las mejores curtiembres nacionales. Nuestro proceso de curtido asegura un material flexible, resistente al agua y con un acabado premium que envejece con elegancia.</p>
+            </div>
+            <div class="card-beneficio">
+                <h3>✂️ Confección Artesanal y Tecnológica</h3>
+                <p>Integramos el detallismo de la costura artesanal con maquinaria de corte láser de última generación. Cada pieza de nuestro inventario es sometida a pruebas de tensión y resistencia antes de llegar a sus manos.</p>
+            </div>
+            <div class="card-beneficio">
+                <h3>📦 Logística y Envíos Seguros</h3>
+                <p>Distribuimos a nivel nacional mediante una red logística optimizada. Empleamos un sistema de embalaje termorregulado que protege la integridad del cuero contra la humedad y cambios bruscos de temperatura durante el tránsito.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-info bg-oscuro reveal">
+        <h2 class="titulo-seccion text-blanco">Nuestro Compromiso con la Calidad</h2>
+        <div class="contenido-info text-blanco">
+            <p>En Sanval S.A.C., entendemos que un artículo de cuero no es solo un accesorio, es una inversión a largo plazo. Por ello, hemos desarrollado un ecosistema de producción sostenible. Desde la selección de las pieles en la Curtiembre del Sur S.A. hasta el ensamblaje final en nuestros talleres, garantizamos cero mermas tóxicas y un respeto absoluto por las normativas ambientales vigentes.</p>
+            <br>
+            <p>Contamos con certificaciones ISO en gestión de calidad y una política de garantía de 12 meses en defectos de fábrica para toda nuestra línea de gorros, sombreros y billeteras. Tu elegancia y satisfacción son el motor de nuestra innovación.</p>
+        </div>
+    </section>
+
+    <a href="https://wa.me/51999999999" target="_blank" class="btn-whatsapp">
+        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+    </a>
+
+    <div class="chatbot-container" id="chatbot">
+        <div class="chat-header">
+            <span>🤖 IA Inventario Sanval</span>
+            <button onclick="toggleChat()" class="btn-cerrar">×</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="mensaje bot">¡Hola! Estoy conectado a la BD. Pregúntame sobre el stock o proveedores.</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Pregunta sobre el inventario..." onkeypress="handleKeyPress(event)">
+            <button onclick="procesarMensaje()">Enviar</button>
+        </div>
+    </div>
+    <button class="btn-flotante" onclick="toggleChat()">💬 Consultar IA</button>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
