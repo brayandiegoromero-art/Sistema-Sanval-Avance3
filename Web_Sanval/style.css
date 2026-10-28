@@ -39,6 +39,13 @@ h3 {
     color: #cc0000;
 }
 
+/* Logo como enlace al Inicio */
+a.logo {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .nav-links a {
     color: white;
     text-decoration: none;

@@ -10,8 +10,20 @@ public class Producto {
     private String color;
     private double precioUnitario;
     private String estado;
+    private int stock;
 
     public Producto() {
+    }
+
+    public Producto(String codigoSKU, String descripcion, String talla, int stock) {
+        this.codigoSKU = codigoSKU;
+        this.descripcion = descripcion;
+        this.talla = talla;
+        this.stock = stock;
+        this.idCategoria = 1;
+        this.color = "Negro";
+        this.precioUnitario = 45.00;
+        this.estado = "Activo";
     }
 
     public Producto(int idProducto, String codigoSKU, String descripcion, int idCategoria, String talla, String color, double precioUnitario, String estado) {
@@ -48,4 +60,7 @@ public class Producto {
 
     public String getEstado() { return estado; }
     public void setEstado(String estado) { this.estado = estado; }
+
+    public int getStock() { return stock; }
+    public void setStock(int stock) { this.stock = stock; }
 }

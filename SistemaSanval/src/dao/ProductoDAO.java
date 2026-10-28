@@ -8,4 +8,8 @@ public interface ProductoDAO {
     boolean registrar(Producto producto);
     List<Producto> listar();
     boolean reducirStock(String sku, int cantidadRestar);
+    
+    // Métodos adicionales para el CRUD del panel administrativo
+    boolean actualizarStock(String sku, int nuevoStock);
+    boolean eliminar(String sku);
 }
